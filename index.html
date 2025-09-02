@@ -2,119 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hilal Intranet</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f8f9fa;
-      color: #333;
-    }
-    header {
-      background: #b91c1c;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header img {
-      height: 50px;
-    }
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background: url("https://picsum.photos/1200/300?blur") center/cover no-repeat;
-      padding: 4rem 2rem;
-      text-align: center;
-      color: white;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .card h3 {
-      margin-top: 0;
-    }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    footer a {
-      color: #ddd;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- Header -->
   <header>
-    <img src="https://dummyimage.com/150x50/ffffff/000000.png&text=Hilal+Logo" alt="Hilal Logo"/>
+    <div class="logo">
+      <img src="https://via.placeholder.com/150x50?text=Hilal+Logo" alt="Hilal Logo" />
+    </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">News</a>
-      <a href="#">Campaigns</a>
-      <a href="#">ERP Portal</a>
-      <a href="#">HRMS</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero Banner -->
-  <section class="hero">
-    <h1>Welcome to Hilal Group Intranet</h1>
-    <p>Your one-stop hub for company news, apps, and resources</p>
+  <!-- Announcements Slider -->
+  <section class="announcements">
+    <h2>Announcements</h2>
+    <div class="slider" id="announcement-slider">
+      <div class="slide">🎉 New Campaign Launch: "Hilal Cares"</div>
+      <div class="slide">📅 ISO Audit Next Week – Be Prepared</div>
+      <div class="slide">⚙️ ERP Portal Upgrade Completed Successfully</div>
+    </div>
+    <div class="slider-controls">
+      <button onclick="prevSlide('announcement-slider')">&#10094;</button>
+      <button onclick="nextSlide('announcement-slider')">&#10095;</button>
+    </div>
   </section>
 
-  <!-- Main Grid -->
-  <section class="grid">
-    <div class="card">
-      <h3>📢 Latest News</h3>
-      <p>Keep up with the latest company announcements and updates.</p>
+  <!-- Employee of the Month -->
+  <section class="employees">
+    <h2>Employee of the Month</h2>
+    <div class="slider" id="employee-slider">
+      <div class="slide">
+        <img src="https://via.placeholder.com/150" alt="Employee" />
+        <p><strong>Ali Khan</strong> – Production</p>
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/150" alt="Employee" />
+        <p><strong>Sara Ahmed</strong> – HR</p>
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/150" alt="Employee" />
+        <p><strong>Omer Ali</strong> – IT</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>🎯 New Campaigns</h3>
-      <p>Explore our ongoing marketing and sales campaigns.</p>
+    <div class="slider-controls">
+      <button onclick="prevSlide('employee-slider')">&#10094;</button>
+      <button onclick="nextSlide('employee-slider')">&#10095;</button>
     </div>
-    <div class="card">
-      <h3>💼 Job Openings</h3>
-      <p>Discover internal opportunities to grow your career with Hilal.</p>
-    </div>
-    <div class="card">
-      <h3>⚙️ Apps & Tools</h3>
-      <p>Access ERP Portal, HRMS, and other internal applications.</p>
+  </section>
+
+  <!-- Birthdays -->
+  <section class="birthdays">
+    <h2>Upcoming Birthdays 🎂</h2>
+    <ul>
+      <li>02 Sep – Ayesha (Finance)</li>
+      <li>05 Sep – Bilal (Production)</li>
+      <li>12 Sep – Farah (HR)</li>
+    </ul>
+  </section>
+
+  <!-- Training Sessions -->
+  <section class="training">
+    <h2>Training Sessions 📚</h2>
+    <ul>
+      <li>06 Sep – Leadership Skills</li>
+      <li>10 Sep – Workplace Safety</li>
+      <li>18 Sep – Advanced Excel</li>
+    </ul>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="quick-links">
+    <h2>Quick Links</h2>
+    <div class="links-grid">
+      <a href="#">ERP Portal</a>
+      <a href="#">HRMS</a>
+      <a href="#">Email</a>
+      <a href="#">IT Support</a>
+      <a href="#">Policies</a>
+      <a href="#">Campaigns</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Hilal Group. All rights reserved.</p>
-    <p>
-      <a href="#">Privacy Policy</a> |
-      <a href="#">Contact IT Support</a>
-    </p>
+    <p>© 2025 Hilal Foods. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
