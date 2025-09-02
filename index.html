@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hilal Intranet Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #8B0000;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      background: #b22222;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 250px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 12s infinite;
+    }
+    .slides div {
+      flex: 1 0 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+    }
+    .slide1 { background: #00695c; }
+    .slide2 { background: #1565c0; }
+    .slide3 { background: #9c27b0; }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+    footer {
+      text-align: center;
+      background: #8B0000;
+      color: white;
+      padding: 1rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hilal Group Intranet</h1>
+    <p>Welcome to the employee portal</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">News</a>
+    <a href="#">Campaigns</a>
+    <a href="#">ERP Portal</a>
+    <a href="#">HR Policies</a>
+    <a href="#">Helpdesk</a>
+  </nav>
+
+  <div class="slider">
+    <div class="slides">
+      <div class="slide1">Employee of the Month: Ali Raza</div>
+      <div class="slide2">Upcoming Training: Leadership Skills</div>
+      <div class="slide3">Company Picnic: September 15th</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Latest News</h2>
+      <p>Hilal launches a new product line this quarter.</p>
+    </div>
+    <div class="card">
+      <h2>Training Sessions</h2>
+      <p>Next session: Digital Transformation – Sept 10</p>
+    </div>
+    <div class="card">
+      <h2>Birthdays</h2>
+      <p>Happy Birthday to Sara Khan – Sept 3 🎉</p>
+    </div>
+    <div class="card">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">ERP System</a></li>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">Support Desk</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Hilal Group | Designed by Syed Afnan Omer Ali</p>
+  </footer>
+</body>
+</html>
