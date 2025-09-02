@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hilal Intranet</title>
   <style>
-    /* ===== Reset & Base ===== */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f4f6f8; color: #333; }
-
-    header, footer {
-      background: #004080;
-      color: #fff;
-      padding: 15px 30px;
-      text-align: center;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
     }
-    header h1 { margin-bottom: 5px; }
-    header nav a {
-      color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold;
+    header {
+      background: #003366;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    header nav a:hover { text-decoration: underline; }
-
-    /* ===== Slider ===== */
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
     .slider {
-      position: relative; overflow: hidden; height: 250px; margin: 20px auto; max-width: 1000px; border-radius: 8px;
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: #ddd;
     }
     .slides {
-      display: flex; width: 300%; height: 100%; animation: slide 12s infinite;
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 12s infinite;
     }
-    .slides div {
-      flex: 1; display: flex; align-items: center; justify-content: center; font-size: 2rem;
-      background: #0066cc; color: white;
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
     }
+    .slide1 { background: #006699; }
+    .slide2 { background: #009966; }
+    .slide3 { background: #cc3300; }
     @keyframes slide {
-      0% { transform: translateX(0); }
-      30% { transform: translateX(0); }
-      35% { transform: translateX(-100%); }
-      65% { transform: translateX(-100%); }
-      70% { transform: translateX(-200%); }
-      100% { transform: translateX(-200%); }
+      0% { margin-left: 0; }
+      30% { margin-left: 0; }
+      35% { margin-left: -100%; }
+      65% { margin-left: -100%; }
+      70% { margin-left: -200%; }
+      100% { margin-left: -200%; }
     }
-
-    /* ===== Grid ===== */
-    .container { max-width: 1100px; margin: auto; padding: 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
-
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
     .card {
-      background: #fff; padding: 20px; border-radius: 8px;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
     }
-    .card h2 { margin-bottom: 10px; color: #004080; }
-
-    ul { list-style: disc inside; }
-    li { margin-bottom: 8px; }
-
-    /* ===== Footer ===== */
-    footer { margin-top: 20px; }
+    .card h2 {
+      margin-top: 0;
+      color: #003366;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -64,72 +92,44 @@
     <nav>
       <a href="#">Home</a>
       <a href="#">News</a>
-      <a href="#">Campaigns</a>
-      <a href="#">Apps</a>
-      <a href="#">Contact</a>
+      <a href="#">Events</a>
+      <a href="#">Applications</a>
     </nav>
   </header>
 
-  <!-- ===== Slider ===== -->
   <section class="slider">
     <div class="slides">
-      <div>Employee of the Month</div>
-      <div>New Campaign Launch</div>
-      <div>Upcoming Training Sessions</div>
+      <div class="slide slide1">🎉 Employee of the Month</div>
+      <div class="slide slide2">📢 New Campaigns Launched</div>
+      <div class="slide slide3">🎓 Training Sessions</div>
     </div>
   </section>
 
-  <!-- ===== Content ===== -->
-  <div class="container">
-    <div>
-      <div class="card">
-        <h2>Company News</h2>
-        <ul>
-          <li>Hilal launches new product line.</li>
-          <li>Factory expansion completed successfully.</li>
-          <li>ISO certification renewed for 2025.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Upcoming Events</h2>
-        <ul>
-          <li>Annual Townhall - Sept 15, 2025</li>
-          <li>Employee Training Week - Oct 2025</li>
-          <li>Sports Gala - Nov 2025</li>
-        </ul>
-      </div>
+  <main class="container">
+    <div class="card">
+      <h2>Company News</h2>
+      <p>Latest updates and announcements from Hilal Group.</p>
     </div>
-
-    <div>
-      <div class="card">
-        <h2>Useful Links</h2>
-        <ul>
-          <li><a href="#">ERP Portal</a></li>
-          <li><a href="#">HRMS</a></li>
-          <li><a href="#">IT Helpdesk</a></li>
-          <li><a href="#">Employee Directory</a></li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Birthdays this Month</h2>
-        <ul>
-          <li>Ali Khan - Sept 5</li>
-          <li>Sara Ahmed - Sept 12</li>
-          <li>Omer Malik - Sept 20</li>
-        </ul>
-      </div>
+    <div class="card">
+      <h2>Events</h2>
+      <p>Upcoming events and celebrations at Hilal.</p>
     </div>
-  </div>
+    <div class="card">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">ERP Portal</a></li>
+        <li><a href="#">HR System</a></li>
+        <li><a href="#">Support Desk</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Birthdays</h2>
+      <p>🎂 Today’s Birthdays: Afnan, Sara</p>
+    </div>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Hilal Foods. All rights reserved.</p>
+    &copy; 2025 Hilal Group | Designed by Syed Afnan Omer Ali
   </footer>
-
-  <script>
-    // For future interactive features (if needed)
-    console.log("Hilal Intranet Loaded");
-  </script>
 </body>
 </html>
