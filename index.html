@@ -2,95 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hilal Intranet Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hilal Intranet</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9fafb;
       margin: 0;
-      padding: 0;
+      background: #f8f9fa;
+      color: #333;
     }
     header {
-      background: #800000;
+      background: #b91c1c;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     header img {
       height: 50px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-    h1 {
-      display: inline;
-      font-size: 24px;
-    }
-    nav {
-      margin-top: 10px;
     }
     nav a {
       color: white;
-      margin: 0 10px;
+      margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .hero {
+      background: url("https://picsum.photos/1200/300?blur") center/cover no-repeat;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
     }
-    main {
-      padding: 20px;
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
     }
     .card {
       background: white;
+      padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin-bottom: 20px;
     }
-    .card h2 {
+    .card h3 {
       margin-top: 0;
     }
     footer {
-      background: #333;
+      background: #222;
       color: white;
       text-align: center;
-      padding: 15px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: #ddd;
+      margin: 0 10px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <img src="https://dummyimage.com/100x50/fff/000&text=Hilal" alt="Hilal Logo" />
-    <h1>Hilal Intranet Portal</h1>
+    <img src="https://dummyimage.com/150x50/ffffff/000000.png&text=Hilal+Logo" alt="Hilal Logo"/>
     <nav>
       <a href="#">Home</a>
       <a href="#">News</a>
       <a href="#">Campaigns</a>
-      <a href="#">Careers</a>
-      <a href="#">Apps</a>
+      <a href="#">ERP Portal</a>
+      <a href="#">HRMS</a>
     </nav>
   </header>
 
-  <main>
-    <div class="card">
-      <h2>Company News</h2>
-      <p>🚀 New production line launched in Karachi plant.</p>
-      <p>📢 Employee engagement week starts Monday.</p>
-    </div>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Welcome to Hilal Group Intranet</h1>
+    <p>Your one-stop hub for company news, apps, and resources</p>
+  </section>
 
+  <!-- Main Grid -->
+  <section class="grid">
     <div class="card">
-      <h2>New Campaigns</h2>
-      <p>🎉 “Taste of Happiness” campaign kicks off nationwide.</p>
+      <h3>📢 Latest News</h3>
+      <p>Keep up with the latest company announcements and updates.</p>
     </div>
-
     <div class="card">
-      <h2>Quick Links</h2>
-      <ul>
-        <li><a href="#">ERP Portal</a></li>
-        <li><a href="#">HRMS</a></li>
-        <li><a href="#">Leave Management</a></li>
-        <li><a href="#">IT Support</a></li
+      <h3>🎯 New Campaigns</h3>
+      <p>Explore our ongoing marketing and sales campaigns.</p>
+    </div>
+    <div class="card">
+      <h3>💼 Job Openings</h3>
+      <p>Discover internal opportunities to grow your career with Hilal.</p>
+    </div>
+    <div class="card">
+      <h3>⚙️ Apps & Tools</h3>
+      <p>Access ERP Portal, HRMS, and other internal applications.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Hilal Group. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Contact IT Support</a>
+    </p>
+  </footer>
+
+</body>
+</html>
